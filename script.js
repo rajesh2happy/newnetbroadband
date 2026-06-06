@@ -193,6 +193,24 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.5 });
   statsObserver.observe(statsSection);
 
+  // ── Speedometer Animation ─────────────────────────────────────
+  const speedDial = document.querySelector('.speed-dial');
+  const speedNeedle = document.querySelector('.speed-needle');
+  if (speedDial && speedNeedle) {
+    const featureObserver = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        speedDial.style.strokeDashoffset = '20';
+        speedNeedle.style.transform = 'rotate(80deg)';
+        featureObserver.unobserve(entries[0].target);
+      }
+    }, { threshold: 0.5 });
+    
+    const featureCard = speedDial.closest('.feature-card');
+    if (featureCard) featureObserver.observe(featureCard);
+  }
+
+
+
 });
 
 // ── Coverage Checker ───────────────────────────────────────────
@@ -203,25 +221,36 @@ window.checkCoverage = function () {
 
   const pin = pinInput.value.trim();
   if (pin.length !== 6 || isNaN(pin)) {
-    resultDiv.textContent = 'Please enter a valid 6-digit PIN code.';
+    resultDiv.innerHTML = '<span style="color: #ef4444;">Please enter a valid 6-digit PIN code.</span>';
     resultDiv.className = 'coverage-result error';
     return;
   }
 
-  // Simulate API call
-  resultDiv.textContent = 'Checking availability...';
+  // Simulate API call with a spinner
+  resultDiv.innerHTML = `
+    <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+      <div style="width: 20px; height: 20px; border: 3px solid rgba(99,102,241,0.3); border-top-color: #6366f1; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+      <span>Checking availability...</span>
+    </div>
+  `;
   resultDiv.className = 'coverage-result';
+  
+  if (!document.getElementById('spin-keyframes')) {
+    const style = document.createElement('style');
+    style.id = 'spin-keyframes';
+    style.textContent = '@keyframes spin { to { transform: rotate(360deg); } }';
+    document.head.appendChild(style);
+  }
 
   setTimeout(() => {
-    // Logic: Only available for pin code 401107
     if (pin === '401107') {
-      resultDiv.textContent = 'Great news! We provide blazing fast internet in your area. View our plans below!';
+      resultDiv.innerHTML = '<span style="color: #10b981; font-weight: 600;">✅ Great news! We provide blazing fast internet in your area. View our plans below!</span>';
       resultDiv.className = 'coverage-result success';
     } else {
-      resultDiv.textContent = 'We are not servicing in this area, we are focused in area near Mira Road, Mumbai';
+      resultDiv.innerHTML = '<span style="color: #ef4444;">❌ We are not servicing in this area yet. We are focused in the Mira Road, Mumbai area.</span>';
       resultDiv.className = 'coverage-result error';
     }
-  }, 800);
+  }, 1500);
 };
 
 // ── Global Fiber Optic Canvas Animation ────────────────────
