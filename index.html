@@ -4,16 +4,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NewNet BroadBand — Blazing Fast Internet</title>
+  <title>Best Internet Connection in Mira Road, Mumbai | NewNet BroadBand</title>
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
   <meta name="description"
-    content="NewNet BroadBand offers secured wireless broadband services to home and enterprise customers. Experience blazing fast internet with 0% buffering." />
+    content="Looking for the best internet connection in Mira Road, Mumbai? NewNet BroadBand offers highly secured, blazing fast unlimited broadband services for home and enterprise." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "InternetServiceProvider",
+    "name": "NewNet BroadBand",
+    "url": "https://rajesh2happy.github.io/newnetbroadband/",
+    "logo": "https://api.qrserver.com/v1/create-qr-code/?data=NewNet&size=160x160",
+    "description": "Looking for the best internet connection in Mira Road, Mumbai? NewNet BroadBand offers highly secured, blazing fast unlimited broadband services for home and enterprise.",
+    "telephone": "+91-9987364629",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "D-15, Shanti Shopping Center, Opp. Mira Road Stn.",
+      "addressLocality": "Mira Road (East)",
+      "addressRegion": "Maharashtra",
+      "postalCode": "401107",
+      "addressCountry": "IN"
+    },
+    "areaServed": ["Mira Road", "Bhayandar", "Mumbai"],
+    "priceRange": "₹"
+  }
+  </script>
 </head>
 
 <body>
@@ -41,7 +62,7 @@
         <button id="themeToggle" class="theme-toggle" aria-label="Toggle Light/Dark Mode">
           <span class="theme-icon">🌙</span>
         </button>
-        <a href="#plans" class="nav-cta">Get Started</a>
+        <button class="nav-cta" onclick="document.getElementById('callbackModal').showModal()" style="border:none; font-family: inherit; cursor:pointer;">Request Call Back</button>
       </div>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
@@ -61,11 +82,11 @@
     <div class="hero-content">
       <div class="hero-badge">🚀 Internet Service Provider</div>
       <h1 class="hero-title">
-        Experience <span class="gradient-text">Blazing Fast</span> Internet
+        Experience <span class="gradient-text">Blazing Fast</span> Internet in Mira Road
       </h1>
       <p class="hero-subtitle">
-        Secured wireless broadband services for home and enterprise.
-        Zero buffering, unlimited possibilities, and speeds that let your aspirations take flight.
+        Mumbai's fastest growing ISP offering secured wireless broadband services for home and enterprise.
+        Zero buffering, truly unlimited plans, and speeds that let your aspirations take flight.
       </p>
       <div class="hero-actions">
         <a href="#plans" class="btn btn-primary">
@@ -105,14 +126,31 @@
   <!-- ===================== COVERAGE CHECKER ===================== -->
   <section id="coverage" class="section coverage-section">
     <div class="container">
-      <div class="coverage-box">
-        <h2>Check Availability in Your Area</h2>
-        <p>Enter your PIN Code to see if NewNet BroadBand is available.</p>
-        <div class="coverage-form">
-          <input type="text" id="pinCode" placeholder="Enter PIN Code" maxlength="6" />
-          <button class="btn btn-primary" onclick="checkCoverage()">Check Now</button>
+      <div class="coverage-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: stretch; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); overflow: hidden;">
+        <div class="coverage-box" style="padding: 40px; display: flex; flex-direction: column; justify-content: center; background: transparent; border: none; max-width: 100%;">
+          <h2>Check Fiber Internet Availability in Mira Road</h2>
+          <p>Enter your PIN Code to see if NewNet BroadBand is available.</p>
+          <div class="coverage-form">
+            <input type="text" id="pinCode" placeholder="Enter PIN Code" maxlength="6" />
+            <button class="btn btn-primary" onclick="checkCoverage()">Check Now</button>
+          </div>
+          <div id="coverageResult" class="coverage-result"></div>
         </div>
-        <div id="coverageResult" class="coverage-result"></div>
+        <div class="coverage-map-wrapper" style="position: relative; min-height: 300px;">
+          <iframe 
+            src="https://maps.google.com/maps?q=D-15,%20Shanti%20Shopping%20Center,%20Opp.%20Mira%20Road%20Stn.,%20Mira%20Road%20(East),%20Mumbai&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+            width="100%" 
+            height="100%" 
+            style="border:0; position: absolute; top:0; left:0; filter: invert(90%) hue-rotate(180deg) contrast(1.2);" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <div class="map-overlay" style="position: absolute; top: 20px; right: 20px; background: var(--bg-card); padding: 8px 16px; border-radius: 50px; font-size: 0.85rem; font-weight: 700; color: #10b981; border: 1px solid rgba(16,185,129,0.3); display: flex; align-items: center; gap: 8px;">
+            <span style="width: 8px; height: 8px; background: #10b981; border-radius: 50%; box-shadow: 0 0 10px #10b981;"></span>
+            High-Speed Fiber Zone
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -143,7 +181,20 @@
           <div class="feature-tag">Enterprise</div>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">⚡</div>
+          <div class="feature-icon" style="position: relative; width: 60px; height: 60px; margin-bottom: 18px;">
+            <svg viewBox="0 0 100 50" style="width: 100%; height: 100%; overflow: visible;">
+              <path d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke="rgba(99,102,241,0.2)" stroke-width="12" stroke-linecap="round"/>
+              <path class="speed-dial" d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke="url(#speedGradient)" stroke-width="12" stroke-linecap="round" stroke-dasharray="125" stroke-dashoffset="125" style="transition: stroke-dashoffset 2s cubic-bezier(0.34, 1.56, 0.64, 1);"/>
+              <defs>
+                <linearGradient id="speedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#22d3ee" />
+                  <stop offset="100%" stop-color="#ec4899" />
+                </linearGradient>
+              </defs>
+              <line class="speed-needle" x1="50" y1="50" x2="20" y2="20" stroke="currentColor" stroke-width="4" stroke-linecap="round" style="transform-origin: 50px 50px; transform: rotate(-45deg); transition: transform 2s cubic-bezier(0.34, 1.56, 0.64, 1);"/>
+              <circle cx="50" cy="50" r="6" fill="var(--bg-card)" stroke="var(--accent-primary)" stroke-width="3"/>
+            </svg>
+          </div>
           <h3>Lightning Speeds</h3>
           <p>Speeds from 50 Mbps up to 10 Gbps. Stream, game, and work without interruption.</p>
         </div>
@@ -174,20 +225,21 @@
       <div class="section-header">
         <span class="section-badge">Pricing</span>
         <h2 class="section-title">Choose Your <span class="gradient-text">Perfect Plan</span></h2>
-        <p class="section-desc">From data-limit plans to unlimited plans — we have something for everyone. No hidden
-          charges, no surprises.</p>
+        <p class="section-desc">All our plans are truly unlimited. Choose the speed that fits your needs. No hidden charges, no surprises.</p>
+
       </div>
       <div class="plans-grid">
         <!-- Plan 1 -->
         <div class="plan-card">
           <div class="plan-header">
             <span class="plan-badge">Starter</span>
-            <h3 class="plan-name">Limited Data</h3>
+            <h3 class="plan-name">Unlimited Basic</h3>
             <div class="plan-speed">Up to <strong>50 Mbps</strong></div>
+
           </div>
           <div class="plan-body">
             <ul class="plan-features">
-              <li><span class="check">✓</span> Fixed data transfer limit</li>
+              <li><span class="check">✓</span> Truly unlimited data</li>
               <li><span class="check">✓</span> Perfect for light browsing</li>
               <li><span class="check">✓</span> Email &amp; social media</li>
               <li><span class="check">✓</span> 24/7 customer support</li>
@@ -202,8 +254,9 @@
           <div class="plan-popular-tag">Most Popular</div>
           <div class="plan-header">
             <span class="plan-badge">Pro</span>
-            <h3 class="plan-name">Unlimited</h3>
+            <h3 class="plan-name">Unlimited Pro</h3>
             <div class="plan-speed">Up to <strong>100 Mbps</strong></div>
+
           </div>
           <div class="plan-body">
             <ul class="plan-features">
@@ -213,29 +266,100 @@
               <li><span class="check">✓</span> HD streaming ready</li>
               <li><span class="check">✓</span> Priority 24/7 support</li>
             </ul>
+            <div class="ott-bundle">
+              <span class="ott-label">Entertainment Included</span>
+              <div class="ott-logos">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Amazon_Prime_Video_logo.svg" alt="Prime Video">
+              </div>
+            </div>
           </div>
           <div class="plan-footer">
             <a href="#contact" class="btn btn-primary">Get This Plan</a>
           </div>
+
         </div>
         <!-- Plan 3 -->
         <div class="plan-card">
           <div class="plan-header">
             <span class="plan-badge">Enterprise</span>
-            <h3 class="plan-name">FUP Plan</h3>
+            <h3 class="plan-name">Unlimited Enterprise</h3>
             <div class="plan-speed">Up to <strong>200 Mbps</strong></div>
+
           </div>
           <div class="plan-body">
             <ul class="plan-features">
+              <li><span class="check">✓</span> Truly unlimited data</li>
               <li><span class="check">✓</span> High-speed dedicated leased line</li>
               <li><span class="check">✓</span> Voice, video &amp; data services</li>
               <li><span class="check">✓</span> Corporate-grade SLA</li>
               <li><span class="check">✓</span> Dedicated account manager</li>
             </ul>
+            <div class="ott-bundle">
+              <span class="ott-label">Entertainment Included</span>
+              <div class="ott-logos">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Amazon_Prime_Video_logo.svg" alt="Prime Video">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Disney%2B_Hotstar_logo.svg" alt="Hotstar">
+              </div>
+            </div>
           </div>
           <div class="plan-footer">
             <a href="#contact" class="btn btn-outline">Contact Sales</a>
           </div>
+        </div>
+      </div>
+      <div class="plan-comparison" style="margin-top: 80px; max-width: 1000px; margin-left: auto; margin-right: auto;">
+        <h3 style="text-align: center; margin-bottom: 40px; font-size: 2rem;">Compare Plan Features</h3>
+        <div style="overflow-x: auto;">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Features</th>
+                <th>Unlimited Basic</th>
+                <th>Unlimited Pro</th>
+                <th>Unlimited Enterprise</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Speed</td>
+                <td>Up to 50 Mbps</td>
+                <td>Up to 100 Mbps</td>
+                <td>Up to 200 Mbps</td>
+              </tr>
+              <tr>
+                <td>Data Limit</td>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr>
+                <td>Free Wi-Fi Router</td>
+                <td><span class="check">✓</span> (Dual Band)</td>
+                <td><span class="check">✓</span> (Dual Band)</td>
+                <td><span class="check">✓</span> (Mesh Wi-Fi)</td>
+              </tr>
+              <tr>
+                <td>OTT Subscriptions</td>
+                <td>-</td>
+                <td>Netflix, Prime Video</td>
+                <td>Netflix, Prime Video, Hotstar</td>
+              </tr>
+              <tr>
+                <td>Static IP</td>
+                <td>-</td>
+                <td>Add-on (₹200/mo)</td>
+                <td><span class="check">✓</span> Included</td>
+              </tr>
+              <tr>
+                <td>SLA Support</td>
+                <td>Standard</td>
+                <td>Priority</td>
+                <td><span class="check">✓</span> Corporate-grade</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
       <p class="plans-note">* Conditions apply. Contact us for detailed pricing and custom packages.</p>
@@ -376,8 +500,8 @@
         <div class="why-card">
           <div class="why-icon">📋</div>
           <h3>Wide Range of Plans</h3>
-          <p>From data-limit to unlimited to multi-month plans — designed to meet your specific requirements and budget.
-            No FUP on unlimited plans.</p>
+          <p>Choose from a variety of unlimited and multi-month plans — designed to meet your specific requirements and budget.
+            Truly unlimited with zero FUP.</p>
         </div>
         <div class="why-card">
           <div class="why-icon">📡</div>
@@ -420,19 +544,19 @@
           <h4>- Priya K.</h4>
         </div>
         <!-- Duplicated for seamless loop -->
-        <div class="testimonial-card">
+        <div class="testimonial-card" aria-hidden="true">
           <p>"Best ISP I've ever used! Speeds are consistent and the customer support is incredibly responsive."</p>
           <h4>- Rahul M.</h4>
         </div>
-        <div class="testimonial-card">
+        <div class="testimonial-card" aria-hidden="true">
           <p>"Switched to NewNet for my small business and the zero-buffering promise is actually true."</p>
           <h4>- Sneha P.</h4>
         </div>
-        <div class="testimonial-card">
+        <div class="testimonial-card" aria-hidden="true">
           <p>"Installation was quick and the internet hasn't gone down once in the last 6 months."</p>
           <h4>- Amit D.</h4>
         </div>
-        <div class="testimonial-card">
+        <div class="testimonial-card" aria-hidden="true">
           <p>"I stream 4K movies daily and NewNet handles it flawlessly. Highly recommended!"</p>
           <h4>- Priya K.</h4>
         </div>
@@ -480,9 +604,12 @@
         <div class="contact-card">
           <span class="contact-card-icon">📍</span>
           <strong>Office Address</strong>
-          <span>D-15, Shanti Shopping Center,</span>
-          <span>Opp. Mira Road Stn.,</span>
-          <span>Mira Road (East) - 401107</span>
+          <address style="font-style: normal; display: flex; flex-direction: column;">
+            <span>D-15, Shanti Shopping Center,</span>
+            <span>Opp. Mira Road Stn.,</span>
+            <span>Mira Road (East), Mumbai</span>
+            <span>Maharashtra - 401107, India</span>
+          </address>
         </div>
         <!-- Card 6: WhatsApp -->
         <div class="contact-card contact-card-whatsapp">
@@ -547,6 +674,30 @@
             href="http://newnetbroadband.in">www.newnetbroadband.in</a></p>
       </div>
   </footer>
+
+  <!-- Callback Modal -->
+  <dialog id="callbackModal" class="callback-modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="document.getElementById('callbackModal').close()" aria-label="Close">&times;</button>
+      <h2>Request a Call Back</h2>
+      <p>Leave your details below and our team will get in touch with you shortly.</p>
+      <form class="modal-form" onsubmit="event.preventDefault(); alert('Request submitted successfully!'); document.getElementById('callbackModal').close();">
+        <input type="text" placeholder="Your Name" required />
+        <input type="tel" placeholder="Phone Number" required pattern="[0-9]{10}" title="10 digit mobile number" />
+        <button type="submit" class="btn btn-primary">Submit Request</button>
+      </form>
+    </div>
+  </dialog>
+
+  <!-- Floating Rating Widget -->
+  <div class="floating-rating">
+    <div class="floating-rating-icon">4.3</div>
+    <div class="floating-rating-content">
+      <div class="floating-rating-title">Top Rated</div>
+      <div class="floating-rating-stars">★★★★<span class="dim">★</span></div>
+      <div class="floating-rating-label">on Google &amp; JustDial</div>
+    </div>
+  </div>
 
   <!-- Floating WhatsApp -->
   <a href="https://wa.me/919987364629" target="_blank" class="floating-whatsapp" aria-label="Chat with us on WhatsApp">
