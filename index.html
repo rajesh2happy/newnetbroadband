@@ -62,7 +62,6 @@
         <button id="themeToggle" class="theme-toggle" aria-label="Toggle Light/Dark Mode">
           <span class="theme-icon">🌙</span>
         </button>
-        <button class="nav-cta" onclick="document.getElementById('callbackModal').showModal()" style="border:none; font-family: inherit; cursor:pointer;">Request Call Back</button>
       </div>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
@@ -656,20 +655,6 @@
             href="http://newnetbroadband.in">www.newnetbroadband.in</a></p>
       </div>
   </footer>
-
-  <!-- Callback Modal -->
-  <dialog id="callbackModal" class="callback-modal">
-    <div class="modal-content">
-      <button class="modal-close" onclick="document.getElementById('callbackModal').close()" aria-label="Close">&times;</button>
-      <h2>Request a Call Back</h2>
-      <p>Leave your details below and our team will get in touch with you shortly.</p>
-      <form class="modal-form" onsubmit="event.preventDefault(); alert('Request submitted successfully!'); document.getElementById('callbackModal').close();">
-        <input type="text" placeholder="Your Name" required />
-        <input type="tel" placeholder="Phone Number" required pattern="[0-9]{10}" title="10 digit mobile number" />
-        <button type="submit" class="btn btn-primary">Submit Request</button>
-      </form>
-    </div>
-  </dialog>
 
   <!-- Floating Rating Widget -->
   <div class="floating-rating">
